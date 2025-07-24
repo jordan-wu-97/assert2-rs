@@ -48,7 +48,7 @@ impl<'a, T: CheckExpression> FailedCheck<'a, T> {
 		let mut print_message = String::new();
 		writeln!(&mut print_message, "{msg} at {file}:{line}:{column}:",
 			msg    = "Assertion failed".red().bold(),
-			file   = self.file.bold(),
+			file   = self.file,
 			line   = self.line,
 			column = self.column,
 		).unwrap();
